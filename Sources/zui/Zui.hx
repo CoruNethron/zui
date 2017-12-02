@@ -564,10 +564,10 @@ class Zui {
 				else if (key == kha.input.KeyCode.Backspace) { // Remove char
 					if (cursorX > 0) {
 						if(highlightStart != highlightEnd) {
-                            text = text.substr(0, highlightStart) + text.substr(highlightEnd, text.length);
+							text = text.substr(0, highlightStart) + text.substr(highlightEnd, text.length);
 						}
-						else{
-                            text = text.substr(0, highlightStart - 1);
+						else {
+							text = text.substr(0, highlightStart - 1);
 						}
 						cursorX--;
 					}
