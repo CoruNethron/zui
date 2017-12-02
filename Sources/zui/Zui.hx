@@ -563,7 +563,12 @@ class Zui {
 				}
 				else if (key == kha.input.KeyCode.Backspace) { // Remove char
 					if (cursorX > 0) {
-						text = text.substr(0, highlightStart) + text.substr(highlightEnd, text.length);
+						if(highlightStart != highlightEnd) {
+                            text = text.substr(0, highlightStart) + text.substr(highlightEnd, text.length);
+						}
+						else{
+                            text = text.substr(0, highlightStart - 1);
+						}
 						cursorX--;
 					}
 				} else if (key == kha.input.KeyCode.Delete) {
